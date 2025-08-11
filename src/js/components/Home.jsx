@@ -36,7 +36,7 @@ const Home = ({ time }) => {
   
   return (
     <div className="text-center">
-      {/* <FontAwesomeIcon icon={faClock} /> */}
+      <span>{/* <FontAwesomeIcon icon={faClock} /> */}</span>
       <span className="digit1 border bg-secondary p-3 m-2">
         {digit4}
       </span>
