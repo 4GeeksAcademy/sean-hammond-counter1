@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Counter from "./Counter.jsx";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 //create your first component
 const Home = ({ time }) => {
   const stringTime = time.toString();
   // console.log(stringTime + 1);
 
-  const digit1 = time > 99 ? stringTime[2] : time > 9 ? stringTime[1] : stringTime[0]
-  const digit2 = time > 99 ? stringTime[1]: time > 9 ? stringTime[0] : ""
-  const digit3 = time > 99 ? stringTime[0]: ""
+  // const digit1 = time > 999 ? stringTime[3] : time > 99 ? stringTime[2] : time < 100 && time > 9 ? stringTime[1] : time < 10 ? stringTime[0] : stringTime[0]
+  const digit1 = time > 999 ? stringTime[3] : time > 99 ? stringTime[2] : time > 9 ? stringTime[1] : stringTime[0]
+  const digit2 = time > 999 ? stringTime[2]: time > 99 ? stringTime[1]: time < 10 ? "" : stringTime[0]
+  const digit3 = time > 999 ? stringTime[1] : time > 99 ? stringTime[0] : ""
+  const digit4 = time > 999 ? stringTime[0]: ""
 
-  // digit3 digit2 digit1
+  
+  // digit4 digit3 digit2 digit1
   
   // single digit
   // digit 1 = stringTime [0]
@@ -31,6 +36,10 @@ const Home = ({ time }) => {
   
   return (
     <div className="text-center">
+      {/* <FontAwesomeIcon icon={faClock} /> */}
+      <span className="digit1 border bg-secondary p-3 m-2">
+        {digit4}
+      </span>
       <span className="digit1 border bg-secondary p-3 m-2">
         {digit3}
       </span>
