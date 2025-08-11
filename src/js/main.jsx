@@ -13,8 +13,7 @@ import Home from './components/Home';
 let seconds = 0;
 
 setInterval(() => {
-  seconds = seconds + 1
-setInterval(()=> setSeconds(seconds + 1), 1000)
+  seconds = seconds + 1,
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
